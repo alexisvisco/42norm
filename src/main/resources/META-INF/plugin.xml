@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>fr.ft.aviscogl.42norm</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <localInspection
+                enabledByDefault="true"
+                implementationClass="fr.ft.aviscogl.event.Inspection"
+        />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="fr.ft.aviscogl.event.OnKeystroke" class="fr.ft.aviscogl.event.OnKeystroke"
+                text="Toggle norm on a file">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt N"/>
+        </action>
+    </actions>
+</idea-plugin>
